@@ -1,4 +1,5 @@
 import { getOpenAIApiKey } from "./apiKeyHelper.js";
+import { formatGitContextForLLM, getGitContext } from "./context.js";
 
 const url = "https://api.openai.com/v1/chat/completions";
 
@@ -9,11 +10,23 @@ You are a helpful assistant that can help with git commands. Your reponse should
 export async function callOpenAI(input: String) {
   const apiKey = await getOpenAIApiKey();
 
+  // Get git context
+  let gitContext = "";
+  try {
+    const context = getGitContext();
+    gitContext = formatGitContextForLLM(context);
+  } catch (error) {
+    gitContext = "Not in a git repository";
+  }
+
   const body = {
     model: "gpt-3.5-turbo",
     messages: [
       { role: "system", content: systemPrompt },
-      { role: "user", content: input },
+      {
+        role: "user",
+        content: `Git Context:\n${gitContext}\n\nUser Request: ${input}`,
+      },
     ],
   };
 
