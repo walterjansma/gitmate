@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import { callOpenAI } from "./apiCallHelper.js";
+
 const input = process.argv.slice(2).join(" ");
 
 if (!input) {
@@ -8,3 +10,8 @@ if (!input) {
 }
 
 console.log(`You said: "${input}"`);
+console.log(`Processing...`)
+
+const response = await callOpenAI(input);
+
+console.log(`OpenAI replies: "${response.choices[0].message.content}"`)
