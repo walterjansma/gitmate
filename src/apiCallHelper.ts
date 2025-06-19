@@ -3,7 +3,7 @@ import { getOpenAIApiKey } from "./apiKeyHelper.js";
 const url = "https://api.openai.com/v1/chat/completions";
 
 const systemPrompt = `
-You are a helpful assistant that can help with git commands. Your reponse should be directly executable in the terminal, without any additional text. If the question is not git-related, you should say "I'm sorry, I can only help with git commands."
+You are a helpful assistant that can help with git commands. Your reponse should be directly executable in the terminal, without any additional text. If multiple commands are needed for the task, you should return them so they can be executed all at once divided by &&. If the question is not git-related, you should say "I'm sorry, I can only help with git commands."
 `;
 
 export async function callOpenAI(input: String) {
