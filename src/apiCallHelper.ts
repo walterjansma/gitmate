@@ -2,13 +2,6 @@ import { getOpenAIApiKey } from "./apiKeyHelper.js"
 
 const url = 'https://api.openai.com/v1/chat/completions';
 
-const body = {
-  model: 'gpt-3.5-turbo',
-  messages: [
-    { role: 'user', content: 'Hello, ChatGPT! How are you today?' }
-  ]
-};
-
 export async function callOpenAI(input: String) {
 
     const apiKey = await getOpenAIApiKey();
