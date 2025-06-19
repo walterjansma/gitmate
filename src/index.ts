@@ -100,6 +100,12 @@ async function main() {
       // Stop animation
       clearInterval(animation);
 
+      // Check if it's the "I'm sorry" message, works for now haha
+      if (command.toLowerCase().includes("i'm sorry")) {
+        console.log(`\n${command}`);
+        process.exit(0);
+      }
+
       // Handle command options
       await handleCommandOptions(command);
     } else {
