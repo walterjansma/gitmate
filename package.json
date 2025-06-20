@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "bin": {
-    "gai": "./dist/index.js"
+    "gai": "./dist/src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -16,11 +16,13 @@
   "devDependencies": {
     "@types/node": "^24.0.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "commander": "^14.0.0",
     "inquirer": "^12.6.3"
   },
-  "type": "module"
+  "type": "module",
+  "types": "types"
 }

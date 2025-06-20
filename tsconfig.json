@@ -1,12 +1,18 @@
 {
     "compilerOptions": {
-      "target": "ES2022",
-      "module": "ESNext",
-      "moduleResolution": "node",
-      "outDir": "dist",
-      "rootDir": "src",
-      "strict": true,
-      "esModuleInterop": true
-    }
+		"target": "ES2022",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"outDir": "dist",
+		"rootDir": ".",
+		"strict": true,
+		"esModuleInterop": true,
+		
+		"baseUrl": ".",          // Project root
+		"paths": {
+			"@/*": ["./src/*"]       // Alias '@' to 'src' folder
+		}
+	},
+	"include": ["src", "tests"]
 }
   
