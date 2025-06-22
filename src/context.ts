@@ -1,14 +1,5 @@
 import { execSync } from "child_process";
-
-export interface GitContext {
-  currentBranch: string;
-  isClean: boolean;
-  untrackedFiles: string[];
-  modifiedFiles: string[];
-  stagedFiles: string[];
-  lastCommit: string;
-  remoteUrl?: string;
-}
+import GitContext from "./types/GitContext";
 
 // Get current branch name
 export function getCurrentBranch(): string {

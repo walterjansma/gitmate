@@ -33,3 +33,11 @@ export async function getOpenAIApiKey() {
 
   return apiKey;
 }
+
+export function isMockApiModeEnabled() {
+	if (fs.existsSync(configFile)) {
+    const data = JSON.parse(fs.readFileSync(configFile, 'utf-8'));
+    
+    return data.USE_OPENAI_MOCK;
+  }
+}
