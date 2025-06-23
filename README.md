@@ -1,5 +1,5 @@
 
-# git-ai 🤖
+# GitMate 🤖
 
 > An AI-powered Git assistant that helps you with Git commands using natural language
 
@@ -7,9 +7,9 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue.svg)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 
-## What is git-ai?
+## What is GitMate?
 
-git-ai is a command-line tool that uses AI to help you with Git operations. Instead of remembering complex Git commands, you can simply describe what you want to do in plain English, and git-ai will generate and execute the appropriate Git commands for you.
+GitMate is a command-line tool that uses AI to help you with Git operations. Instead of remembering complex Git commands, you can simply describe what you want to do in plain English, and GitMate will generate and execute the appropriate Git commands for you.
 
 ### Features
 
@@ -31,40 +31,40 @@ git-ai is a command-line tool that uses AI to help you with Git operations. Inst
 
 1. **Install globally via npm**
    ```bash
-   npm install -g git-ai
+   npm install -g gitmate
    ```
 
 2. **Set up your OpenAI API key**
-   The first time you run `gai`, you'll be prompted to enter your OpenAI API key. It will be saved securely in `~/.config/gai/config.json`.
+   The first time you run `gm`, you'll be prompted to enter your OpenAI API key. It will be saved securely in `~/.config/gm/config.json`.
 
-That's it! You're ready to use git-ai.
+That's it! You're ready to use GitMate.
 
 ## Usage
 
-Once installed, you can use the `gai` command (short for git-ai) followed by your request:
+Once installed, you can use the `gm` command (short for GitMate) followed by your request:
 
 ### Examples
 
 ```bash
 # Commit changes
-gai commit all my changes with message "fix user authentication bug"
+gm commit all my changes with message "fix user authentication bug"
 
 # Create and switch to new branch
-gai create a new branch called feature/user-dashboard and switch to it
+gm create a new branch called feature/user-dashboard and switch to it
 
 # Push changes
-gai push my changes to the remote repository
+gm push my changes to the remote repository
 
 # Check what files are modified
-gai show me what files I've changed
+gm show me what files I've changed
 
 # Reset changes
-gai discard all my uncommitted changes
+gm discard all my uncommitted changes
 ```
 
 ## How it Works
 
-1. **Context Gathering**: git-ai automatically detects your current Git repository state, including:
+1. **Context Gathering**: GitMate automatically detects your current Git repository state, including:
    - Current branch
    - Modified, staged, and untracked files
    - Last commit information
@@ -78,7 +78,7 @@ gai discard all my uncommitted changes
 
 ## Configuration
 
-The tool stores configuration in `~/.config/gai/config.json`:
+The tool stores configuration in `~/.config/gm/config.json`:
 
 ```json
 {
@@ -95,7 +95,7 @@ For development or testing, you can enable mock responses by setting `USE_OPENAI
 
 ### For Contributors
 
-If you want to contribute to git-ai, you'll need to build from source:
+If you want to contribute to GitMate, you'll need to build from source:
 
 #### Prerequisites
 
@@ -106,8 +106,8 @@ If you want to contribute to git-ai, you'll need to build from source:
 
 1. **Clone and install**
    ```bash
-   git clone https://github.com/walterjansma/git-ai.git
-   cd git-ai
+   git clone https://github.com/walterjansma/git-mate.git
+   cd GitMate
    npm install
    ```
 
