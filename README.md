@@ -1,3 +1,4 @@
+![GitMate Header](assets/gitmate-header.png)
 
 # GitMate 🤖
 
