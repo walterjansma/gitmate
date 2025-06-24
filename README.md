@@ -31,7 +31,7 @@ GitMate is a command-line tool that uses AI to help you with Git operations. Ins
 
 1. **Install globally via npm**
    ```bash
-   npm install -g gitmate
+   npm install -g gitmate-cli
    ```
 
 2. **Set up your OpenAI API key**
