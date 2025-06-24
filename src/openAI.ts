@@ -32,7 +32,7 @@ export async function callOpenAI(input: String) {
     };
 
     if (isMockApiModeEnabled()) {
-        console.warn("Warning: Using mock OpenAI reponse data, set `USE_OPENAI_MOCK` to false in `~/.config/gm/config.json` to make real API calls.")
+        console.warn("Warning: Using mock OpenAI reponse data, set `USE_OPENAI_MOCK` to false in `~/.config/gmate/config.json` to make real API calls.")
         return mockOpenAIResponse.data;
     } else {
         const response = await fetch(url, {

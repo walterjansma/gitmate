@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import os from 'os';
 
-const configDir = path.join(os.homedir(), '.config', 'gm');
+const configDir = path.join(os.homedir(), '.config', 'gmate');
 const configFile = path.join(configDir, 'config.json');
 
 export async function getOpenAIApiKey() {
@@ -19,7 +19,7 @@ export async function getOpenAIApiKey() {
       {
         type: 'input',
         name: 'apiKey',
-        message: 'Your OpenAI key is not set yet, please enter your OpenAI API Key below (you can always change it later in ~/.config/gm/config.json):',
+        message: 'Your OpenAI key is not set yet, please enter your OpenAI API Key below (you can always change it later in ~/.config/gmate/config.json):',
         validate: input => input.startsWith('sk-') || 'Must start with sk-',
       },
     ]);

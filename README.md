@@ -35,31 +35,31 @@ GitMate is a command-line tool that uses AI to help you with Git operations. Ins
    ```
 
 2. **Set up your OpenAI API key**
-   The first time you run `gm`, you'll be prompted to enter your OpenAI API key. It will be saved securely in `~/.config/gm/config.json`.
+   The first time you run `gmate`, you'll be prompted to enter your OpenAI API key. It will be saved securely in `~/.config/gmate/config.json`.
 
 That's it! You're ready to use GitMate.
 
 ## Usage
 
-Once installed, you can use the `gm` command (short for GitMate) followed by your request:
+Once installed, you can use the `gmate` command (short for GitMate) followed by your request:
 
 ### Examples
 
 ```bash
 # Commit changes
-gm commit all my changes with message "fix user authentication bug"
+gmate commit all my changes with message "fix user authentication bug"
 
 # Create and switch to new branch
-gm create a new branch called feature/user-dashboard and switch to it
+gmate create a new branch called feature/user-dashboard and switch to it
 
 # Push changes
-gm push my changes to the remote repository
+gmate push my changes to the remote repository
 
 # Check what files are modified
-gm show me what files I've changed
+gmate show me what files I've changed
 
 # Reset changes
-gm discard all my uncommitted changes
+gmate discard all my uncommitted changes
 ```
 
 ## How it Works
@@ -78,7 +78,7 @@ gm discard all my uncommitted changes
 
 ## Configuration
 
-The tool stores configuration in `~/.config/gm/config.json`:
+The tool stores configuration in `~/.config/gmate/config.json`:
 
 ```json
 {
