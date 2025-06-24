@@ -1,6 +1,6 @@
 {
   "name": "gitmate-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An AI-powered Git assistant that helps you with Git commands using natural language",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,15 @@
     "type": "git",
     "url": "https://github.com/walterjansma/gitmate"
   },
-  "keywords": ["git", "git-mate", "ai-git", "git-assistant", "ai-git-assistant", "git-cli", "git-llm"],
+  "keywords": [
+    "git",
+    "git-mate",
+    "ai-git",
+    "git-assistant",
+    "ai-git-assistant",
+    "git-cli",
+    "git-llm"
+  ],
   "author": "Walter Jansma & Jan van Dorth",
   "license": "MIT",
   "devDependencies": {
