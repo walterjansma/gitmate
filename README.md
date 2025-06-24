@@ -106,8 +106,8 @@ If you want to contribute to GitMate, you'll need to build from source:
 
 1. **Clone and install**
    ```bash
-   git clone https://github.com/walterjansma/git-mate.git
-   cd GitMate
+   git clone https://github.com/walterjansma/gitmate.git
+   cd gitmate
    npm install
    ```
 
