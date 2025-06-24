@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "vitest"
+    "postbuild": "chmod +x ./dist/src/index.js",
+    "test": "vitest",
+    "postinstall": "chmod +x ./dist/src/index.js"
   },
   "bin": {
     "gmate": "./dist/src/index.js"
