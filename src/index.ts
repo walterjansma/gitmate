@@ -16,7 +16,7 @@ async function main() {
 
 		if (isAgent) {
 			// Route to agent handler
-			command = await handleAgentRequest(input);
+			command = await handleAgentRequest(input, animationClass);
 			animationClass.stopAnimation();
 			console.log(`\n🤖 ${command}\n`);
 			return;
