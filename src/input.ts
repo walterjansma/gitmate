@@ -6,17 +6,21 @@ export async function getInitialInput() {
     program
         .option('-a, --agent', 'enable agent mode')
         .allowUnknownOption()
+        .argument('[input...]', 'git command in natural language')
         .parse();
 
     const options = program.opts();
     
-    // Get remaining arguments as the input command
-    const remainingArgs = program.args;
-    let input = remainingArgs.join(" ");
+    // Get the input arguments
+    const inputArgs = program.args;
+    let input = inputArgs.join(" ");
     
     if (!input) {
-        return await promptForInput();
-    } else {
-        return input;
+        input = await promptForInput();
     }
+
+    return {
+        input,
+        isAgent: options.agent || false
+    };
 }
