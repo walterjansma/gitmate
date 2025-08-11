@@ -1,6 +1,6 @@
 {
   "name": "gitmate-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An AI-powered Git assistant that helps you with Git commands using natural language",
   "main": "index.js",
   "scripts": {
